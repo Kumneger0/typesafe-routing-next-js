@@ -1,0 +1,36 @@
+{
+  "name": "nextjs-declarative-routing",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "dr:build": "declarative-routing build",
+    "dr:build:watch": "declarative-routing build --watch",
+    "openapi": "npm run openapi:yaml && npm run openapi:html",
+    "openapi:yaml": "ts-node ./src/routes/openapi.ts",
+    "openapi:html": "npx @redocly/cli build-docs openapi-docs.yml"
+  },
+  "dependencies": {
+    "declarative-routing": "^0.1.12",
+    "next": "14.2.2",
+    "query-string": "^9.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@asteasolutions/zod-to-openapi": "^7.0.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.2",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "yaml": "^2.4.1"
+  }
+}
