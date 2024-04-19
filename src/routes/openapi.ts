@@ -5,11 +5,29 @@ import {
 import * as yaml from "yaml";
 import * as fs from "fs";
 
+import * as ApiPosts from "../../src/app/api/posts/route.info";
 
 
 const registry = new OpenAPIRegistry();
 
-
+registry.registerPath({
+  method: "get",
+  path: "/api/posts",
+  summary: "",
+  request: {
+  params: ApiPosts.Route.params,
+  },
+  responses: {
+    200: {
+      description: "Success",
+      content: {
+        "application/json": {
+          schema: ApiPosts.GET.result,
+        },
+      },
+    },
+  },
+});
 
 const generator = new OpenApiGeneratorV3(registry.definitions);
 const docs = generator.generateDocument({

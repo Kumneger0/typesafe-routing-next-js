@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Posts, Home } from "@/routes";
+import { About, Posts, Home, ClientPosts } from "@/routes";
 
 function Header() {
   return (
@@ -9,6 +9,9 @@ function Header() {
       </div>
       <div className="p-2 mx-3">
         <Posts.Link>posts</Posts.Link>
+      </div>
+      <div className="p-2 mx-3">
+        <ClientPosts.Link>api route example</ClientPosts.Link>
       </div>
       <div className="p-2 mx-3">
         <About.Link>about</About.Link>

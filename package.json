@@ -14,6 +14,7 @@
     "openapi:html": "npx @redocly/cli build-docs openapi-docs.yml"
   },
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "declarative-routing": "^0.1.12",
     "next": "14.2.2",
     "query-string": "^9.0.0",

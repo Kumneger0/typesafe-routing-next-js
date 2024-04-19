@@ -1,20 +1,23 @@
 import React from "react";
 import { Post } from "../page";
 import { notFound } from "next/navigation";
+import { posts } from "@/db/db";
 
 const getPost = async (id: string) => {
-  const responce = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${id}`
-  );
-  return (await responce.json()) as Post;
+  const post = posts.find(({ id: pid }) => id == String(pid));
+  return post;
 };
 
 async function PostIdPage({ params }: { params: { postID: string } }) {
   if (!params.postID) {
     notFound();
   }
-
   const post = await getPost(params.postID);
+
+  if (!post) {
+    notFound();
+  }
+
   return (
     <div>
       <div className="font-bold text-xl">{post.title}</div>
