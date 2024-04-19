@@ -3,6 +3,7 @@ import { z } from "zod";
 export const Route = {
   name: "ApiPosts",
   params: z.object({}),
+  search: z.object({ limit: z.number().nullable() }),
 };
 
 export const GET = {

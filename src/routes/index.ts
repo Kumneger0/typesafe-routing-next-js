@@ -7,10 +7,7 @@ const defaultInfo = {
 };
 
 import * as HomeRoute from "@/app/page.info";
-import * as AboutRoute from "@/app/about/page.info";
 import * as ApiPostsRoute from "@/app/api/posts/route.info";
-import * as ClientPostsRoute from "@/app/client/posts/page.info";
-import * as PostsRoute from "@/app/posts/page.info";
 import * as PostsPostIDRoute from "@/app/posts/[postID]/page.info";
 
 export const Home = makeRoute(
@@ -18,27 +15,6 @@ export const Home = makeRoute(
   {
     ...defaultInfo,
     ...HomeRoute.Route
-  }
-);
-export const About = makeRoute(
-  "/about",
-  {
-    ...defaultInfo,
-    ...AboutRoute.Route
-  }
-);
-export const ClientPosts = makeRoute(
-  "/client/posts",
-  {
-    ...defaultInfo,
-    ...ClientPostsRoute.Route
-  }
-);
-export const Posts = makeRoute(
-  "/posts",
-  {
-    ...defaultInfo,
-    ...PostsRoute.Route
   }
 );
 export const PostsPostID = makeRoute(

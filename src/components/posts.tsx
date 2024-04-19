@@ -1,7 +1,7 @@
 import { PostsPostID } from "@/routes";
 import React from "react";
 
-function Posts({ id, title }: { id: number; title: string }) {
+function Post({ id, title }: { id: number; title: string }) {
   return (
     <div key={id}>
       <PostsPostID.Link postID={String(id)}>
@@ -13,4 +13,4 @@ function Posts({ id, title }: { id: number; title: string }) {
   );
 }
 
-export default Posts;
+export default Post;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Post } from "../page";
 import { notFound } from "next/navigation";
 import { posts } from "@/db/db";
 
