@@ -1,0 +1,1 @@
+# typesafe-routing-next-js
